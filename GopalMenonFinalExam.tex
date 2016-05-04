@@ -106,13 +106,17 @@ This is true. The Vertex Cover problem can be reduced to the Load Balancing prob
 
 \item Quasi-polynomial, weakly-polynomial, and pseudo-polynomial are all polynomial.
 
+This is false.
+
 \begin{enumerate}
 
-\item Quasi-polynomial (QP) time is greater than polynomial time and less than exponential time - $n^d < QP < 2^n$, for a constant $d$. So this is not polynomial time.
+\item Quasi-polynomial (QP) run time is greater than polynomial time and less than exponential time - $n^d < QP < 2^n$, for a constant $d \geq 0$, where $n$ is the input size. So this is not polynomial time.
 
-\item Weakly-polynomial time
+\item Weakly-polynomial running time is a function of the number of input bits. For example $O(n \cdot log M)$. Here $M$ is the input value and $log M$ is the number of input bits. So this is not polynomial time.
 
 \item Pseudo-polynomial time is a polynomial function of the input value (as opposed to input size). An example is the Dynamic Programming solution for a Subset Sum problem which is $O(n \cdot M)$, where $n$ is the input size and $M$ is the input value for the target sum. This can be shown to be of the order of $O(n \cdot 2^m)$, where $m=log M$. So if we need to find the subset sum of 100 bit integers, we need to have a table if size $n \cdot 2^{100}$, in order to find a subset sum for a target value that uses the 100 bits. So this is actually exponential in nature.
+
+\item Polynomial time, or strongly polynomial time is where the run time is a function of the input size - $O(n^d)$, where $d \geq 0$. 
 
 \end{enumerate}
 
