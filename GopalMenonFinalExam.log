@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2016 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2016 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1388,13 +1388,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
  []
 
 
-Overfull \hbox (0.1699pt too wide) in paragraph at lines 173--175
+Overfull \hbox (0.1699pt too wide) in paragraph at lines 187--189
 []\T1/futs/m/n/10.95 In class we stud-ied a ran-dom-ized al-go-rithm for the MA
 X-3SAT prob-lem. We have shown
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
@@ -1413,7 +1413,7 @@ r/fourier-mex.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/fourie
 r/fourier-ms.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/p
 utb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putr8a.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on GopalMenonFinalExam.pdf (4 pages, 64104 bytes).
+Output written on GopalMenonFinalExam.pdf (4 pages, 65075 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream

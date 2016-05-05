@@ -166,6 +166,20 @@ In simple terms we can say that the worst solution provided by an approximate al
 \item \textbf{(10 points)} Consider the dual load balancing problem in Question 2 of Assignment 10. In Question 2(c), based on the assumption that $t_i \leq \frac{A}{2m}$ for each job $i$, we have shown that the simple greedy algorithm (i.e., consider the jobs in an arbitrary order and assign each job to the machine with the minimum load) can give a 2-approximation solution.
 Suppose we do not have the above assumption that $t_i \leq \frac{A}{2m}$. Does the simple greedy algorithm still give a 2-approximation solution? Please justify your answer (i.e., if yes, then give the proof; otherwise, give a counterexample).\\
 
+The simple greedy algorithm will not give a 2-approximation solution when we do not have the above assumption that $t_i \leq \frac{A}{2m}$.
+
+Consider the case where the jobs sizes arrive as per the order $\{2, 2, 2, 2, 2, 8, 8, 8, 8\}$, and there are 5 machines. As per the greedy algorithm, the job sizes assigned to the machines will be 
+$$
+\{\{2, 8\}, \{2, 8\}, \{2, 8\}, \{2, 8\}, \{2\}\}
+$$ 
+
+The minimum machine load as per the greedy algorithm will be 2. The optimal job assignment to the machines will be 
+$$
+\{\{8\}, \{8\}, \{8\}, \{8\}, \{2, 2, 2, 2, 2\}\}
+$$
+
+So $C=2$ and $OPT=8$. The approximation ration will be $\frac{OPT}{C} = \frac{8}{2} = 4$.
+
 \item \textbf{(10 points)} Given a set of $k$ clauses $C_1, C_2, . . . , C_k$ (each having three distinct literals) over a set of n variables $x_1, x_2, . . . , x_n$, the MAX-3SAT problem is to compute an assignment for the variables such that the number of satisfied clauses is maximized.
 In class we studied a randomized algorithm for the MAX-3SAT problem. We have shownthat by assigning each variable $x_i$ to 1 with probability 0.5, the expected number of satisfied clauses is $\frac{7}{8} \cdot k$. Using this result, prove that if $k \leq 7$, then there always exists an assignment for the variables that satisfies all clauses.\\
 
