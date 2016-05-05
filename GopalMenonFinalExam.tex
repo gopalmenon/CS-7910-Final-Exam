@@ -126,6 +126,37 @@ Since $A$ is an approximation algorithm for the Vertex Cover problem, which is a
 
 \end{enumerate}
 
+\item \textbf{(10 points)} Let $G$ be a bipartite graph, i.e., its nodes are partitioned into two sets $X$ and $Y$ so that each edge has one end in $X$ and the other in $Y$. We define an $(a, b)-skeleton$ of $G$ to be a subset $E\textprime$ of edges of $G$ so that \textit{at most} $a$ nodes in $X$ are incident to an edge in $E\textprime$ and \textit{at least} $b$ nodes in $Y$ are incident to an edge in $E\textprime$. Refer to Figure 1 for an example.
+Given $a$ and $b$, the \textit{skeleton problem} on $G$ is to decide whether $G$ has an $(a, b)-skeleton$. Prove that the skeleton problem is NP-Complete.
+
+We can try to reduce the Vertex Cover problem, which is in NP-Complete, to the skeleton problem.
+
+Let the instance of the Vertex Cover problem be $(H, k)$, where $H$ is a graph and we need to find a Vertex Cover consisting of at most $k$ vertices. Let $(X, Y, a, b)$ be the instance of a skeleton problem where $X, Y, a, b$ are as described above. 
+
+To construct the instance of the skeleton problem from the vertex cover problem, do the following:
+
+\begin{enumerate}
+
+\item Make $X$ the set of all vertices in $H$
+
+\item Take the set of all edges in $H$. For each edge in $H$, construct a vertex in $Y$ and an edge from that vertex in $Y$ to the two vertices in $X$ that are on the two ends of the edge.
+
+\item Set $a = k$
+
+\item Set $b =$ number of vertices in $Y$ or the number of edges in $H$. Both are the same value
+
+\end{enumerate}
+
+Clearly this construction can be done in polynomial time. 
+
+Given an instance of the skeleton problem $(X, Y, a, b)$ and a certificate, which will be the set of vertices in $X$ and $Y$ that are the solution, it can be verified in polynomial time that the number of vertices in $X$ is at most $a$ and the number of vertices in $Y$ is at least $b$. So the skeleton problem is in NP.
+
+Consider the case where there exists a vertex cover that is of size at most $k$ elements. This means that there will be at most $a$ vertices or nodes in $X$ that cover (or are incident to) all the vertices or nodes in $Y$. This means that the nodes in $X$ cover at least $b$ nodes in $Y$.
+
+In the case where there exists an (a, b) skeleton of the bipartite graph, the there will exist a vertex cover consisting of at most $k$ nodes (since $a=k$) that cover all the edges in the graph.
+
+This means that we can reduce the vertex cover problem in polynomial time to the skeleton problem. So the skeleton problem is in NP-Hard. Since the skeleton problem is also in NP, we can conclude that the skeleton problem is in NP-Complete.
+
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
