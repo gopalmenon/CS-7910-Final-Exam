@@ -86,7 +86,7 @@
 
 $NP$ stands for Non-Deterministic Polynomial. $NP$ is the set of all problems for which algorithms run in polynomial time on a non-deterministic machine. This machine can be thought of one that can take all possible paths in parallel. On a real machine with finite resources, all $NP$ algorithms will not run in polynomial time (unless if $P = NP$, which is highly unlikely). The set of problems for which algorithms run in polynomial time is called $P$ and $P \subseteq NP$. Another property of $NP$ algorithms is that even though they cannot all run in polynomial time, given a certificate that is a solution to an $NP$ problem, it can be verified in polynomial time that the certificate is correct.
 
-$NP-Complete$ is the set of the hardest problems in $NP$. All $NP$ problems can be reduced to $NP-Complete$ problems in polynomial time. Actually if an $NP$ problem can be reduced to another problem, then the resulting problem is said to be in the set $NP-Hard$. The intersection of the sets $NP$ and $NP-Hard$ is the set $NP-Complete$.
+$NP-Complete$ is the set of the hardest problems in $NP$. All $NP$ problems can be reduced to $NP-Complete$ problems in polynomial time (as long as the certificate can be verified in polynomial time). Actually if an $NP$ problem can be reduced to another problem, then the resulting problem is said to be in the set $NP-Hard$. The intersection of the sets $NP$ and $NP-Hard$ is the set $NP-Complete$.
 
 \item \textbf{(15 points)} For each of the following statements, please tell whether it is true and briefly explain your answer.
 
@@ -112,7 +112,7 @@ This is false.
 
 \item Quasi-polynomial (QP) run time is greater than polynomial time and less than exponential time - $n^d < QP < 2^n$, for a constant $d \geq 0$, where $n$ is the input size. So this is not polynomial time.
 
-\item Weakly-polynomial running time is a function of the number of input bits. For example $O(n \cdot log M)$. Here $M$ is the input value and $log M$ is the number of input bits. So this is not polynomial time.
+\item Weakly-polynomial running time is a function of the number of input bits. For example $O(n \cdot log M)$. Here $M$ is the input value and $log M$ is the number of input bits. So this is not a polynomial function of the input size $n$.
 
 \item Pseudo-polynomial time is a polynomial function of the input value (as opposed to input size). An example is the Dynamic Programming solution for a Subset Sum problem which is $O(n \cdot M)$, where $n$ is the input size and $M$ is the input value for the target sum. This can be shown to be of the order of $O(n \cdot 2^m)$, where $m=log M$. So if we need to find the subset sum of 100 bit integers, we need to have a table if size $n \cdot 2^{100}$, in order to find a subset sum for a target value that uses the 100 bits. So this is actually exponential in nature.
 
@@ -126,12 +126,12 @@ Since $A$ is an approximation algorithm for the Vertex Cover problem, which is a
 
 \end{enumerate}
 
-\item \textbf{(10 points)} Let $G$ be a bipartite graph, i.e., its nodes are partitioned into two sets $X$ and $Y$ so that each edge has one end in $X$ and the other in $Y$. We define an $(a, b)-skeleton$ of $G$ to be a subset $E\textprime$ of edges of $G$ so that \textit{at most} $a$ nodes in $X$ are incident to an edge in $E\textprime$ and \textit{at least} $b$ nodes in $Y$ are incident to an edge in $E\textprime$. Refer to Figure 1 for an example.\\
-Given $a$ and $b$, the \textit{skeleton problem} on $G$ is to decide whether $G$ has an $(a, b)-skeleton$. Prove that the skeleton problem is NP-Complete.
+\item \textbf{(10 points)} Let $G$ be a bipartite graph, i.e., its nodes are partitioned into two sets $X$ and $Y$ so that each edge has one end in $X$ and the other in $Y$. We define an $(a, b)-skeleton$ of $G$ to be a subset $E\textprime$ of edges of $G$ so that \textit{at most} $a$ nodes in $X$ are incident to an edge in $E\textprime$ and \textit{at least} $b$ nodes in $Y$ are incident to an edge in $E\textprime$. Refer to Figure 1 for an example.
+Given $a$ and $b$, the \textit{skeleton problem} on $G$ is to decide whether $G$ has an $(a, b)-skeleton$. Prove that the skeleton problem is NP-Complete.\\
 
 We can try to reduce the Vertex Cover problem, which is in NP-Complete, to the skeleton problem.
 
-Let the instance of the Vertex Cover problem be $(H, k)$, where $H$ is a graph and we need to find a Vertex Cover consisting of at most $k$ vertices. Let $(X, Y, a, b)$ be the instance of a skeleton problem where $X, Y, a, b$ are as described above. 
+Let the instance of the Vertex Cover problem be $(H, k)$, where $H$ is a graph and we need to find a Vertex Cover consisting of at most $k$ vertices. Let $(X, Y, a, b)$ be the instance of the skeleton problem where $X, Y, a, b$ are as described above. 
 
 To construct the instance of the skeleton problem from the vertex cover problem, do the following:
 
@@ -139,7 +139,7 @@ To construct the instance of the skeleton problem from the vertex cover problem,
 
 \item Make $X$ the set of all vertices in $H$
 
-\item Take the set of all edges in $H$. For each edge in $H$, construct a vertex in $Y$ and an edge from that vertex in $Y$ to the two vertices in $X$ that are on the two ends of the edge.
+\item Take the set of all edges in $H$. For each edge in $H$, construct a vertex in $Y$ and two edges from that vertex in $Y$ to the two vertices in $X$ that are on the two ends of the edge.
 
 \item Set $a = k$
 
@@ -149,7 +149,7 @@ To construct the instance of the skeleton problem from the vertex cover problem,
 
 Clearly this construction can be done in polynomial time. 
 
-Given an instance of the skeleton problem $(X, Y, a, b)$ and a certificate, which will be the set of vertices in $X$ and $Y$ that are the solution, it can be verified in polynomial time that the number of vertices in $X$ is at most $a$ and the number of vertices in $Y$ is at least $b$. So the skeleton problem is in NP.
+Given an instance of the skeleton problem $(X, Y, a, b)$ and a certificate, which will be the set of vertices in $X$ and $Y$ that are the solution, it can be verified in polynomial time that the number of vertices in $X$ is at most $a$ and the number of vertices in $Y$ is at least $b$. We can also verify in polynomial time that the set of nodes in $X$ that are part of the certificate, are incident on the nodes in $Y$ that are part of the certificate. So the skeleton problem is in NP.
 
 Consider the case where there exists a vertex cover that is of size at most $k$ elements. This means that there will be at most $a$ vertices or nodes in $X$ that cover (or are incident to) all the vertices or nodes in $Y$. This means that the nodes in $X$ cover at least $b$ nodes in $Y$.
 
@@ -183,7 +183,7 @@ So $C=2$ and $OPT=8$. The approximation ration will be $\frac{OPT}{C} = \frac{8}
 \item \textbf{(10 points)} Given a set of $k$ clauses $C_1, C_2, . . . , C_k$ (each having three distinct literals) over a set of n variables $x_1, x_2, . . . , x_n$, the MAX-3SAT problem is to compute an assignment for the variables such that the number of satisfied clauses is maximized.
 In class we studied a randomized algorithm for the MAX-3SAT problem. We have shownthat by assigning each variable $x_i$ to 1 with probability 0.5, the expected number of satisfied clauses is $\frac{7}{8} \cdot k$. Using this result, prove that if $k \leq 7$, then there always exists an assignment for the variables that satisfies all clauses.\\
 
-The expected number of satisfied clauses is $\frac{7}{8} \cdot k$. For every value of $k$,  the expected number of satisfied clauses is a real number with a floor of $k-1$ and a ceiling of $k$. Since this is the expected or average number of satisfied clauses, and the actual number of satisfied clauses has to be an integer, this means that for some assignments, the number of satisfied clauses has to be $k$. Since $k$ is the total number of clauses, we can confidently say that there always exists an assignment for the variables that satisfies all clauses.
+The expected number of satisfied clauses is $\frac{7}{8} \cdot k$. For $k \leq 7$,  the expected number of satisfied clauses is a real number with a floor of $k-1$ and a ceiling of $k$. Since this is the expected or average number of satisfied clauses, and the actual number of satisfied clauses has to be an integer, this means that for some assignments, the number of satisfied clauses has to be $k$. Since $k$ is the total number of clauses, we can confidently say that there always exists an assignment for the variables that satisfies all clauses when $k \leq 7$.
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
