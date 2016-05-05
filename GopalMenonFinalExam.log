@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2016 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2016 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1329,10 +1329,45 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 85.
 Missing character: There is no ^^L in font fourier-mex!
- [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+[1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+[2]
 Overfull \hbox (1.30302pt too wide) in paragraph at lines 131--132
 []\T1/futs/m/n/10.95 Given $\FML/futmi/m/it/10.95 a$ \T1/futs/m/n/10.95 and $\F
 ML/futmi/m/it/10.95 b$\T1/futs/m/n/10.95 , the \T1/futs/m/it/10.95 skele-ton pr
@@ -1342,7 +1377,28 @@ mi/m/it/10.95 a; b\T1/futs/m/n/10.95 ) \FMS/futm/m/n/10.95 ^^@ \FML/futmi/m/it/
 10.95 skeleton$\T1/futs/m/n/10.95 .
  []
 
-[2] [3] (./GopalMenonFinalExam.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Overfull \hbox (0.1699pt too wide) in paragraph at lines 173--175
+[]\T1/futs/m/n/10.95 In class we stud-ied a ran-dom-ized al-go-rithm for the MA
+X-3SAT prob-lem. We have shown
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
+[4] (./GopalMenonFinalExam.aux) ) 
 Here is how much of TeX's memory you used:
  26206 strings out of 493089
  520323 string characters out of 6134842
@@ -1350,17 +1406,17 @@ Here is how much of TeX's memory you used:
  29218 multiletter control sequences out of 15000+600000
  78859 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,67p,10406b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/
-enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/fo
-urier/fourier-ms.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utop
-ia/putb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putr
-8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb
->
-Output written on GopalMenonFinalExam.pdf (3 pages, 57661 bytes).
+ 64i,12n,67p,10406b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/
+dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/fourie
+r/fourier-mex.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/fourie
+r/fourier-ms.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/p
+utb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putr8a.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on GopalMenonFinalExam.pdf (4 pages, 64104 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
